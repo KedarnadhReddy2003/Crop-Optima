@@ -1,0 +1,62 @@
+{% include "user_header.html "%}
+
+<!-- //header -->
+  <!-- about breadcrumb -->
+  <section class="w3l-about-breadcrumb text-left">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+      <div class="container">
+        <h2 class="title">Crop Prediction</h2>
+        <!--ul class="breadcrumbs-custom-path mt-2">
+          <li><a href="#">Home</a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Crop Prediction </li>
+        </ul>-->
+      </div>
+    </div>
+  </section>
+  <!-- //about breadcrumb -->
+   <!-- /contact--><br>
+<div class="banner-info-bg text-left">
+                    {% if result %}
+		  <center><h4>Recommended Crop name : <font color="red">{{ result }}</font></h4></center><br>
+                <center><h4>Recommended Fertilizer:<br>  <font color="red">{{ fertilizer }}</font></h4></center>
+    {% endif %}
+
+                  </div>
+  <div class="contact-form py-5" id="contact">
+    <div class="container py-lg-5 py-md-4">
+      <h3 class="hny-title mb-lg-5 mb-4"></h3>
+        <div class="contacts12-main mb-5">
+
+             <form action="crop_prediction" method="POST">
+                <div class="main-input">
+                       <label><b>Temperature:</b></label>
+                    <div class="d-grid">
+
+                        <input type="text" name="temp"  placeholder="Enter Temperature value" class="contact-input" required />
+                    </div>
+                     <label><b>Humidity:</b></label>
+                    <div class="d-grid">
+                        <input type="text" name="humd"  placeholder="Enter Humidity value" class="contact-input" required />
+                    </div>
+  <label><b>pH:</b></label>
+                    <div class="d-grid">
+                        <input type="text" name="ph"  placeholder="Enter pH value" class="contact-input" required />
+                    </div>
+                      <label><b>Rainfall:</b></label>
+                    <div class="d-grid">
+                        <input type="text" name="rainfall"   placeholder="Enter Rainfall value" class="contact-input" required />
+                    </div>
+                </div>
+                    <button class="btn btn-style btn-secondary btn-contact">Prediction</button>
+            </form>
+
+
+        </div>
+    </div>
+
+
+  </div>
+
+
+
+{% include "footer.html "%}

@@ -1,0 +1,61 @@
+{% include "user_header.html "%}
+
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:hover {background-color: #ddd;}
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:  #009933;
+  color: white;
+}
+</style>
+   </head>
+
+
+<section class="w3l-about-breadcrumb text-left">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+      <div class="container">
+        <h2 class="title">Disease Detection</h2>
+        <!--ul class="breadcrumbs-custom-path mt-2">
+          <li><a href="#">Home</a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Detection </li>
+        </ul>-->
+      </div>
+    </div>
+
+  </section>
+
+<div class="contact-form py-5" id="contact">
+    <div class="container py-lg-5 py-md-4">
+
+        <div class="contacts12-main mb-5">
+            <div class="col-lg-6 bottom-ab-right mt-lg-0 mt-5">
+                <!--<h6 class="hny-title"><font size="+3">Result:</font> <a href="fertilizers/{{result}}">{{result}}</a> </h6>-->
+          <img src="{{ url_for('static',filename='detection.jpg')}}"  width="350" height="350" class="img-curve img-fluid" alt="" />
+
+
+        </div>
+
+        <br><br>
+        <table id="customers">
+                            <tr><th>DISEASE NAME</th><th>REASONS</th><th>SOLUTIONS</th><th>FERTILIZERS</th></tr>
+                            <tr><td><b>{{detailes[0][0]}}</b></td><td><b>{{detailes[0][1]}}</b></td><td><b>{{detailes[0][2]}}</b></td><td><b>{{detailes[0][3]}}</b></td></tr>
+
+</table>
+        </div>
+    </div>
+  </div>
+
+{% include "footer.html "%}

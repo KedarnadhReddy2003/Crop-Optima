@@ -1,0 +1,40 @@
+{% include "user_header.html "%}
+{% if msg %}
+		<script>alert('Invalid image, please select a valid image.')</script>
+{% endif %}
+<!-- //header -->
+  <!-- about breadcrumb -->
+  <section class="w3l-about-breadcrumb text-left">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+      <div class="container">
+        <h2 class="title">Crop Disease Detection</h2>
+        <!--ul class="breadcrumbs-custom-path mt-2">
+          <li><a href="#">Home</a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Pest Detection </li>
+        </ul>-->
+      </div>
+    </div>
+  </section>
+  <!-- //about breadcrumb -->
+   <!-- /contact-->
+  <div class="contact-form py-5" id="contact">
+    <div class="container py-lg-5 py-md-4">
+      <h3 class="hny-title mb-lg-5 mb-4">Crop Disease Detection</h3>
+        <div class="contacts12-main mb-5">
+            <form action="detection2" method="post" enctype="multipart/form-data">
+                <div class="main-input">
+                    <div class="d-grid">
+                      <label>Select crop images
+                        <input type="file" name="pic"  accept="image/*" placeholder=" " class="contact-input" required />
+                    </div>
+
+                </div>
+                    <button class="btn btn-style btn-secondary btn-contact">DETECT</button>
+            </form>
+        </div>
+    </div>
+  </div>
+
+
+
+{% include "footer.html "%}
